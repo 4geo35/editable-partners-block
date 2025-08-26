@@ -1,0 +1,27 @@
+{
+    "name": "4geo35/editable-partners-block",
+    "description": "Add partners block",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladimir",
+            "email": "aweram-team@yanex.ru"
+        }
+    ],
+    "require": {
+        "4geo35/editable-blocks": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "GIS\\EditablePartnersBlock\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GIS\\EditablePartnersBlock\\EditablePartnersBlockServiceProvider"
+            ]
+        }
+    }
+}
