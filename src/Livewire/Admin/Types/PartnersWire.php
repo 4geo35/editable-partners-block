@@ -14,13 +14,14 @@ use Livewire\WithFileUploads;
 
 class PartnersWire extends Component implements SimpleItemActionsInterface
 {
-    use WithFileUploads, EditBlockTrait, SimpleItemActionsTrait, CheckBlockAuthTrait, DeleteImageTrait;
+    use WithFileUploads, EditBlockTrait, SimpleItemActionsTrait, CheckBlockAuthTrait;
 
     public function rules(): array
     {
+        $imageRequired = $this->itemId ? "nullable" : "required";
         return [
-            "title" => ["nullable", "string", "max:150"],
-            "image" => ["nullable", "image"],
+            "title" => ["required", "string", "max:150"],
+            "image" => [$imageRequired, "image"],
         ];
     }
 
