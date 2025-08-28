@@ -6,10 +6,10 @@
         <form wire:submit.prevent="{{ $itemId ? 'update' : 'store' }}"
               class="space-y-indent-half" id="partnersBlockDataForm-{{ $block->id }}">
             <div>
-                <label for="imageTextTitle-{{ $block->id }}" class="inline-block mb-2">
+                <label for="partnersTitle-{{ $block->id }}" class="inline-block mb-2">
                     Заголовок<span class="text-danger">*</span>
                 </label>
-                <input type="text" id="imageTextTitle-{{ $block->id }}" required
+                <input type="text" id="partnersTitle-{{ $block->id }}" required
                        class="form-control {{ $errors->has("title") ? "border-danger" : "" }}"
                        wire:loading.attr="disabled"
                        wire:model="title">
@@ -17,8 +17,8 @@
             </div>
 
             <div>
-                <label for="imageTextImage-{{ $block->id }}" class="inline-block mb-2">Изображение</label>
-                <input type="file" id="imageTextImage-{{ $block->id }}"
+                <label for="partnersImage-{{ $block->id }}" class="inline-block mb-2">Изображение</label>
+                <input type="file" id="partnersImage-{{ $block->id }}"
                        class="form-control {{ $errors->has('image') ? 'border-danger' : '' }}"
                        wire:loading.attr="disabled"
                        wire:model.lazy="image">
