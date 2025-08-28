@@ -11,5 +11,8 @@ return [
     // Admin
     "customPartnersComponent" => null,
     // Templates
-    "templates" => [],
+    "templates" => [
+        "partners-record" => \GIS\EditablePartnersBlock\Templates\PartnersRecord::class,
+        "partners-record-tablet" => \GIS\EditablePartnersBlock\Templates\PartnersRecordTablet::class,
+    ],
 ];
