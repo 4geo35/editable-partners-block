@@ -7,6 +7,7 @@ use GIS\EditableBlocks\Interfaces\SimpleItemActionsInterface;
 use GIS\EditableBlocks\Traits\CheckBlockAuthTrait;
 use GIS\EditableBlocks\Traits\DeleteImageTrait;
 use GIS\EditableBlocks\Traits\EditBlockTrait;
+use GIS\EditableBlocks\Traits\PlaceholderBlockTrait;
 use GIS\EditableBlocks\Traits\SimpleItemActionsTrait;
 use Illuminate\View\View;
 use Livewire\Component;
@@ -14,7 +15,7 @@ use Livewire\WithFileUploads;
 
 class PartnersWire extends Component implements SimpleItemActionsInterface
 {
-    use WithFileUploads, EditBlockTrait, SimpleItemActionsTrait, CheckBlockAuthTrait;
+    use WithFileUploads, EditBlockTrait, SimpleItemActionsTrait, CheckBlockAuthTrait, PlaceholderBlockTrait;
 
     public function rules(): array
     {
