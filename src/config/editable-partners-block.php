@@ -3,7 +3,7 @@
 return [
     "availableTypes" => [
         "partners" => [
-            "title" => "Партнеры",
+            "title" => env("EDITABLE_PARTNERS_TITLE", "Партнеры"),
             "admin" => "epb-partners",
             "render" => "epb::types.partners",
         ],
